@@ -2,6 +2,11 @@
 
 Este projeto é uma aplicação web desenvolvida em Python com Flask que utiliza Inteligência Artificial (Google Gemini) para classificar e sugerir respostas automáticas para e-mails. O objetivo é otimizar o tempo dos usuários, identificando rapidamente e-mails produtivos e improdutivos, além de gerar respostas automáticas para e-mails que exigem ação.
 
+## Pré-requisitos
+
+- **Python 3.13 ou superior** instalado em seu computador.
+  - [Download Python](https://www.python.org/downloads/)
+
 ## Funcionalidades
 
 - **Upload de arquivos**: Suporte para arquivos `.txt` e `.pdf` contendo o corpo do e-mail.
@@ -44,7 +49,7 @@ Este projeto é uma aplicação web desenvolvida em Python com Flask que utiliza
 
 4. **Configure a chave da API Gemini**
    - Remova `.example` do arquivo `.env.example` na raiz do projeto
-   - Adicione sua chave de api do Gemini
+   - Adicione sua chave de API do Gemini
 
 ## Uso
 
