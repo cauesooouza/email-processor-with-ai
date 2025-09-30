@@ -35,7 +35,7 @@ Email:
 
     def suggest_reply(self, original_text: str, category: str) -> str:
         if category == "Improdutivo":
-            return "Este email não parece necessitar de uma resposta. Se desejar, um simples 'Obrigado!' pode ser suficiente."
+            return "Este email não necessita de resposta."
 
         prompt = f"""
 Com base no email abaixo, classificado como 'Produtivo', gere uma resposta curta, profissional e em português. 
