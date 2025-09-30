@@ -1,6 +1,7 @@
 import logging
 import os
 
+import nltk
 from flask import Flask, render_template, request
 
 from app.service.email_service import EmailService
@@ -13,6 +14,12 @@ if not os.path.exists(UPLOAD_FOLDER):
     
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+for resource in ['stopwords', 'punkt', 'wordnet']:
+    try:
+        nltk.data.find(f'corpora/{resource}' if resource in ['stopwords', 'wordnet'] else f'tokenizers/{resource}')
+    except LookupError:
+        nltk.download(resource)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
