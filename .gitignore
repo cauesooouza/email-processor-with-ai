@@ -1,0 +1,7 @@
+.env
+env/
+.vscode/
+uploads/
+*.pyc
+/*/*/__pycache__
+/*/__pycache__
