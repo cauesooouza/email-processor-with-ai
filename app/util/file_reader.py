@@ -1,3 +1,4 @@
+import logging
 import os
 
 from pypdf import PdfReader
@@ -26,6 +27,6 @@ class FileReader:
             for page in reader.pages:
                 text += page.extract_text() or ""
         except Exception as error:
-            print(f"Erro ao ler PDF: {error}")
+            logging.error(f"Erro ao ler PDF: {error}")
             raise IOError("Não foi possivel extrair texto do arquivo PDF.")
         return text
